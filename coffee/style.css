@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #d63447;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  width: 250px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .steamContainer {
+  width: 80%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .steamContainer .steam1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+.container .steamContainer .steam4 {
+  width: 70px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.container .steams {
+  width: 200px;
+  height: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .steams .steam2 {
+  width: 30%;
+  height: 100%;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  position: relative;
+  right: 50px;
+}
+
+.container .steams .steam3 {
+  width: 50%;
+  height: 100%;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  position: relative;
+  left: 40px;
+}
+
+.container .steams .steam5 {
+  width: 35%;
+  height: 100%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  position: relative;
+  right: 20px;
+}
+
+.container .steams .bubble2,
+.container .steams .bubble3,
+.container .steams .bubble5 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e2c275;
+  position: relative;
+  -webkit-animation: bFloat 1.5s infinite ease-in;
+          animation: bFloat 1.5s infinite ease-in;
+}
+
+.container .steams .bubble3 {
+  top: 15px;
+  right: 130px;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.container .steams .bubble5 {
+  top: 5px;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.container .cup {
+  width: 60%;
+  height: 30%;
+  background: #f9f9f9;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.container .cup::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #d63447;
+  border-left: 20px solid transparent;
+  position: absolute;
+  right: -3px;
+  bottom: 0;
+}
+
+.container .halfcup {
+  width: 30%;
+  height: 30%;
+  background: #f9f9f9;
+  position: absolute;
+  bottom: 21px;
+  left: 50px;
+  border-radius: 15px 0 0 0;
+}
+
+.container .halfcup::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #d63447;
+  border-right: 20px solid transparent;
+}
+
+.container .handle {
+  width: 40px;
+  height: 60px;
+  border-radius: 0 50% 50% 0;
+  background: #d63447;
+  position: absolute;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  border: 10px solid #f9f9f9;
+  right: 26px;
+  bottom: 40px;
+}
+
+.container .coaster {
+  width: 100%;
+  height: 6%;
+  background: #63301a;
+  border-radius: 10px;
+  position: relative;
+}
+
+.container .coaster::after {
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: #63301a;
+  position: absolute;
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.steam1,
+.steam2,
+.steam3,
+.steam4,
+.steam5 {
+  width: 20%;
+  height: 5%;
+  border-radius: 10px;
+  background: #eadca6;
+  -webkit-animation: sFloat 1.5s infinite linear;
+          animation: sFloat 1.5s infinite linear;
+}
+
+@-webkit-keyframes sFloat {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50% {
+    -webkit-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes sFloat {
+  0% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  50% {
+    -webkit-transform: scaleX(0.8);
+            transform: scaleX(0.8);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes BFloat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes BFloat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

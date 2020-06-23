@@ -1,0 +1,202 @@
+//colors
+$bg: #d63447;
+$cup: #f9f9f9;
+$coaster: #63301a;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: $bg;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+
+  .steamContainer {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .steam1 {
+      align-self: center;
+      animation-delay: 1.3s;
+    }
+
+    .steam4 {
+      width: 70px;
+      align-self: center;
+      animation-delay: 0.5s;
+    }
+  }
+
+  .steams {
+    width: 200px;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+
+    .steam2 {
+      width: 30%;
+      height: 100%;
+      animation-delay: 1s;
+      position: relative;
+      right: 50px;
+    }
+
+    .steam3 {
+      width: 50%;
+      height: 100%;
+      animation-delay: 0.8s;
+      position: relative;
+      left: 40px;
+    }
+
+    .steam5 {
+      width: 35%;
+      height: 100%;
+      animation-delay: 0.2s;
+      position: relative;
+      right: 20px;
+    }
+
+    .bubble2,
+    .bubble3,
+    .bubble5 {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #e2c275;
+      position: relative;
+      animation: bFloat 1.5s infinite ease-in;
+    }
+
+    .bubble3 {
+      top: 15px;
+      right: 130px;
+      animation-delay: 0.7s;
+    }
+
+    .bubble5 {
+      top: 5px;
+      animation-delay: 0.4s;
+    }
+  }
+
+  .cup {
+    width: 60%;
+    height: 30%;
+    background: $cup;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .cup::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid $bg;
+    border-left: 20px solid transparent;
+    position: absolute;
+    right: -3px;
+    bottom: 0;
+  }
+
+  .halfcup {
+    width: 30%;
+    height: 30%;
+    background: $cup;
+    position: absolute;
+    bottom: 21px;
+    left: 50px;
+    border-radius: 15px 0 0 0;
+  }
+
+  .halfcup::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid $bg;
+    border-right: 20px solid transparent;
+  }
+
+  .handle {
+    width: 40px;
+    height: 60px;
+    border-radius: 0 50% 50% 0;
+    background: $bg;
+    position: absolute;
+    transform: rotate(10deg);
+    border: 10px solid $cup;
+    right: 26px;
+    bottom: 40px;
+  }
+
+  .coaster {
+    width: 100%;
+    height: 6%;
+    background: $coaster;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .coaster::after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: $coaster;
+    position: absolute;
+    right: 0;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.steam1,
+.steam2,
+.steam3,
+.steam4,
+.steam5 {
+  width: 20%;
+  height: 5%;
+  border-radius: 10px;
+  background: #eadca6;
+  animation: sFloat 1.5s infinite linear;
+}
+
+@keyframes sFloat {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.8);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes BFloat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
