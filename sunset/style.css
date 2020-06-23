@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+
+.container {
+  width: 600px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sun,
+.shadow {
+  width: 200px;
+  height: 100px;
+  background: #fff;
+  border-radius: 100px 100px 0 0;
+  margin: 0 auto;
+}
+
+.shadow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: #000;
+  position: relative;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven,
+.twelve,
+.thirteen {
+  width: 200px;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.one {
+  width: 1000px;
+  -webkit-transform: translate(40%);
+          transform: translate(40%);
+}
+
+.two {
+  bottom: 8px;
+}
+
+.three {
+  bottom: 16px;
+  width: 196px;
+  right: 2px;
+}
+
+.four {
+  bottom: 24px;
+  width: 192px;
+  right: 4px;
+}
+
+.five {
+  bottom: 32px;
+  width: 188px;
+  right: 6px;
+}
+
+.six {
+  bottom: 40px;
+  width: 182px;
+  right: 9px;
+}
+
+.seven {
+  bottom: 48px;
+  width: 174px;
+  right: 13px;
+}
+
+.eight {
+  bottom: 56px;
+  width: 162px;
+  right: 19px;
+}
+
+.nine {
+  bottom: 64px;
+  width: 150px;
+  right: 25px;
+}
+
+.ten {
+  bottom: 72px;
+  width: 133px;
+  right: 33px;
+}
+
+.eleven {
+  bottom: 80px;
+  width: 112px;
+  right: 44px;
+}
+
+.twelve {
+  bottom: 88px;
+  width: 84px;
+  right: 58px;
+}
+
+.thirteen {
+  bottom: 96px;
+  width: 32px;
+  right: 85px;
+}
