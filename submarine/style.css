@@ -1,0 +1,290 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  position: relative;
+}
+
+.sea {
+  height: 100vh;
+  width: 100%;
+  background: #130560;
+  position: absolute;
+}
+
+.submarine {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.body {
+  background: #e30449;
+  width: 250px;
+  height: 80px;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.propeller {
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 80%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.parts {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+}
+
+.partDark {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f7ac08;
+  -webkit-transform: rotateY(180deg) rotateX(225deg);
+          transform: rotateY(180deg) rotateX(225deg);
+}
+
+.partLight {
+  width: 100%;
+  height: 100%;
+  background: #f7e349;
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+}
+
+.sail {
+  background: #c6003d;
+  width: 90px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  -webkit-clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+
+.sailShadow {
+  background: #a10532;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  border-radius: 5px;
+}
+
+.dark1 {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(0, -33%);
+          transform: translate(0, -33%);
+}
+
+.light1 {
+  background: #ef689e;
+  left: 20%;
+  top: 20%;
+  width: 50%;
+}
+
+.dark2 {
+  left: 0;
+  top: 50%;
+}
+
+.window1,
+.window2 {
+  background: linear-gradient(45deg, #c9e5d9, #fff);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: windowShadow 1s linear infinite;
+          animation: windowShadow 1s linear infinite;
+}
+
+.window1 {
+  left: 40%;
+}
+
+.window2 {
+  left: 20%;
+}
+
+.shadowDark {
+  background: #a10532;
+  width: 70px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 65%;
+  left: 70%;
+}
+
+.shadowLight {
+  background: #ef689e;
+  width: 100px;
+  height: 6px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 13%;
+  left: 35%;
+}
+
+.shadowCircle {
+  background: #ef689e;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 75%;
+  top: 20%;
+}
+
+.periscope {
+  width: 20px;
+  height: 50px;
+  border-right: 10px solid #e92d77;
+  border-top: 10px solid #c6003d;
+  border-left: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-radius: 10px;
+  position: absolute;
+  left: 40%;
+}
+
+.periscopeGlass {
+  background: #f7ac08;
+  width: 5px;
+  height: 15px;
+  position: absolute;
+  left: 40%;
+  -webkit-transform: translate(-50%, -15%);
+          transform: translate(-50%, -15%);
+}
+
+.light {
+  background: -webkit-gradient(linear, right top, left top, from(#817e97), to(#130560));
+  background: linear-gradient(to left, #817e97, #130560);
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  -webkit-clip-path: polygon(0% 0%, 50% 45%, 50% 55%, 0% 100%);
+          clip-path: polygon(0% 0%, 50% 45%, 50% 55%, 0% 100%);
+  -webkit-transform: translate(-18%, -45%);
+          transform: translate(-18%, -45%);
+}
+
+.ground {
+  background: #08003b;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes windowShadow {
+  0%,
+  100% {
+    background-image: linear-gradient(45deg, #c9e5d9 0%, #c9e5d9 20%, #fff 21%, #fff 39%, #c9e5d9 40%, #fff 41%, #fff 59%, #c9e5d9 60%);
+  }
+  20% {
+    background-image: linear-gradient(45deg, #c9e5d9 20%, #c9e5d9 40%, #fff 41%, #fff 59%, #c9e5d9 60%, #fff 61%, #fff 79%, #c9e5d9 80%);
+  }
+  40% {
+    background-image: linear-gradient(45deg, #c9e5d9 40%, #c9e5d9 60%, #fff 61%, #fff 79%, #c9e5d9 80%, #fff 81%, #fff 99%, #c9e5d9 0%);
+  }
+  60% {
+    background-image: linear-gradient(45deg, #c9e5d9 60%, #c9e5d9 80%, #fff 81%, #fff 99%, #c9e5d9 0%, #fff 1%, #fff 19%, #c9e5d9 20%);
+  }
+  80% {
+    background-image: linear-gradient(45deg, #c9e5d9 80%, #c9e5d9 0%, #fff 1%, #fff 19%, #c9e5d9 20%, #fff 21%, #fff 39%, #c9e5d9 40%);
+  }
+}
+
+@keyframes windowShadow {
+  0%,
+  100% {
+    background-image: linear-gradient(45deg, #c9e5d9 0%, #c9e5d9 20%, #fff 21%, #fff 39%, #c9e5d9 40%, #fff 41%, #fff 59%, #c9e5d9 60%);
+  }
+  20% {
+    background-image: linear-gradient(45deg, #c9e5d9 20%, #c9e5d9 40%, #fff 41%, #fff 59%, #c9e5d9 60%, #fff 61%, #fff 79%, #c9e5d9 80%);
+  }
+  40% {
+    background-image: linear-gradient(45deg, #c9e5d9 40%, #c9e5d9 60%, #fff 61%, #fff 79%, #c9e5d9 80%, #fff 81%, #fff 99%, #c9e5d9 0%);
+  }
+  60% {
+    background-image: linear-gradient(45deg, #c9e5d9 60%, #c9e5d9 80%, #fff 81%, #fff 99%, #c9e5d9 0%, #fff 1%, #fff 19%, #c9e5d9 20%);
+  }
+  80% {
+    background-image: linear-gradient(45deg, #c9e5d9 80%, #c9e5d9 0%, #fff 1%, #fff 19%, #c9e5d9 20%, #fff 21%, #fff 39%, #c9e5d9 40%);
+  }
+}
